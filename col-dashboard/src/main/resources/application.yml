@@ -1,0 +1,18 @@
+server:
+  port: 8900
+eureka:
+  client:
+    service-url:
+      defaultZone: http://col:collm@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    appname: col-dashboard
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: col-consumer
+  clusterNameExpression: new String("default")
+spring:
+  application:
+    name: col-dashboard

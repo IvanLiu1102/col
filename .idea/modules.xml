@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/col-all-test/col-all-test.iml" filepath="$PROJECT_DIR$/col-all-test/col-all-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/col-config-server/col-config-server.iml" filepath="$PROJECT_DIR$/col-config-server/col-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/col-consumer/col-consumer.iml" filepath="$PROJECT_DIR$/col-consumer/col-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/col-dashboard/col-dashboard.iml" filepath="$PROJECT_DIR$/col-dashboard/col-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/col-eureka-server/col-eureka-server.iml" filepath="$PROJECT_DIR$/col-eureka-server/col-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/col-provider/col-provider.iml" filepath="$PROJECT_DIR$/col-provider/col-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/col-zipkin/col-zipkin.iml" filepath="$PROJECT_DIR$/col-zipkin/col-zipkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/col-zuul/col-zuul.iml" filepath="$PROJECT_DIR$/col-zuul/col-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/col.cloud.iml" filepath="$PROJECT_DIR$/col.cloud.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+server:
+  port: 8100
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://col:collm@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    appname: col-provider
+spring:
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+  application:
+    name: col-provider
