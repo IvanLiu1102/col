@@ -9,6 +9,9 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Base64;
 import java.util.Date;
+import java.util.Set;
 import java.util.concurrent.*;
 
 /**
@@ -53,8 +57,20 @@ public class UserController {
     @RequestMapping("/redis")
     @ResponseBody
     public String redisOperate(){
-        redisTemplate.opsForValue().set("key","value");
-        System.out.println(redisTemplate.opsForValue().get("key"));
+        String key = RandomCodeUtil.randomIncode();
+        //存入string
+        RedisUtil.set(key, key);
+        //删除所有的key
+        long l = RedisUtil.deleteAll("*");
+        System.out.println(l);
+        redisTemplate.opsForHash().put("0", "1", "25789");
+        redisTemplate.opsForHash().put("0", "2", "2342");
+        redisTemplate.opsForHash().put("1", "3", "2342");
+
+        System.out.println(redisTemplate.opsForHash().get("0", "1"));
+        System.out.println(redisTemplate.opsForHash().get("1", "3"));
+
         return "success";
     }
+
 }

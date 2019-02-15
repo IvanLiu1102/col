@@ -31,6 +31,17 @@ public class RandomCodeUtil {
         return str;
     }
 
+    //生成5位随机大写英文字母入库码
+    public static String randomIncode(int len){
+        String str = "";
+        Random rand = new Random();
+        for(int i=0;i<len;i++){
+            char c2 = (char)(rand.nextInt(26)+'A');//生成随机大写字母
+            str += c2;
+        }
+        return str;
+    }
+
     public static String randomPhone(){
         String str = "186";
         Random rand = new Random();
