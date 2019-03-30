@@ -37,4 +37,11 @@ public class FeignController {
         return result;
     }
 
+
+    @RequestMapping("/insert")
+    @HystrixCommand
+    public String insert(){
+        String result = feignClient.inserUser();
+        return result;
+    }
 }

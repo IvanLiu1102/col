@@ -3,6 +3,7 @@ package com.col.feign;
 import com.col.feign.config.MFeignConfig;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -21,4 +22,7 @@ public interface MFeignClient {
 
     @RequestMapping(value = "/index/hello")
     String hello();
+
+    @PostMapping(value = "/user/insertBatch")
+    String inserUser();
 }

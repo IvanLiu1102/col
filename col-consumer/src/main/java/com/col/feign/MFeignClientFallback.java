@@ -16,4 +16,9 @@ public class MFeignClientFallback implements MFeignClient{
     public String hello() {
         return "hello fallback ";
     }
+
+    @Override
+    public String inserUser() {
+        return null;
+    }
 }

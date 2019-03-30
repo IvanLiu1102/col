@@ -11,6 +11,6 @@ public class KafkaConsumer {
 
     @KafkaListener(topics = "test2")
     private void receiver(String message){
-        System.out.println("test2 收到消息==========" + message);
+        System.out.println("consumer 收到消息==========" + message);
     }
 }
