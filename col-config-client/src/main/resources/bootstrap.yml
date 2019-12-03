@@ -1,0 +1,9 @@
+# 指明配置服务中心的网址
+
+spring:
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      label: client
+      name: client
+      profile: dev
