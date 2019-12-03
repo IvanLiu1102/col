@@ -1,7 +1,7 @@
 spring:
-#  kafka:
-#    producer:
-#      bootstrap-servers: 192.168.182.128:9092,192.168.182.129:9092,192.168.182.130:9092
+  kafka:
+    producer:
+      bootstrap-servers: 192.168.110.129:9092,192.168.110.131:9092,192.168.110.132:9092
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver

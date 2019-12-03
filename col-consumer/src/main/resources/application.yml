@@ -25,3 +25,8 @@ management:
 hystrix:
   metrics:
     enabled: true
+
+#设置feign请求响应超时时间
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 5000

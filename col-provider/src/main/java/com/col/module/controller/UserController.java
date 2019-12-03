@@ -25,6 +25,7 @@ public class UserController {
 
     private ExecutorService executorService = Executors.newFixedThreadPool(100);
 
+
     @RequestMapping("/test")
     @ResponseBody
     public String test(){
@@ -54,6 +55,11 @@ public class UserController {
     @PostMapping("/insertBatch")
     @ResponseBody
     public String insertBatch(User user) {
+        try {
+            Thread.sleep(2000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         for (int i = 0; i < 1; i++) {
             Base64.Encoder base64 = Base64.getEncoder();
             String username = RandomCodeUtil.randomIncode();

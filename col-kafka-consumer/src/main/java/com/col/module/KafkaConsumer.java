@@ -1,5 +1,6 @@
 package com.col.module;
 
+import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +11,8 @@ import org.springframework.stereotype.Component;
 public class KafkaConsumer {
 
     @KafkaListener(topics = "test2")
-    private void receiver(String message){
-        System.out.println("consumer 收到消息==========" + message);
+    private void receiver(ConsumerRecord<String,String> record){
+        System.out.printf("消费消息：topic=%s, partition=%d, offset=%d, key=%s, value=%s\n",
+                record.topic(), record.partition(), record.offset(), record.key(), record.value());
     }
 }
